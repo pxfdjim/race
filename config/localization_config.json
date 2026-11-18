@@ -1,0 +1,18 @@
+{
+  "maximum_time_span_seconds": 0.08,
+  "minimum_crossing_angle_degrees": 7.0,
+  "bearing_error_floor_degrees": 0.15,
+  "residual_gate_degrees": 1.2,
+  "residual_sigma_multiplier": 3.0,
+  "motion_bound_m_per_second": 180.0,
+  "maximum_range_m": 180000.0,
+  "maximum_condition_number": 1000.0,
+  "position_error_floor_m": 30.0,
+  "maximum_major_error_proxy_m": 5000.0,
+  "subset_ambiguity_distance_m": 500.0,
+  "maximum_iterations": 12,
+  "track_bin_seconds": 0.5,
+  "track_segment_gap_seconds": 5.0,
+  "track_acceleration_sigma_m_per_second2": 8.0,
+  "track_innovation_gate_squared": 25.0
+}

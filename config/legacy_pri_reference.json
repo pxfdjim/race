@@ -1,0 +1,18 @@
+{
+  "rf_gate": 500.0,
+  "pw_gate": 0.35,
+  "doa_gate_degrees": 7.0,
+  "pa_cost_scale": 10.0,
+  "difference_order": 16,
+  "min_pri_raw": 1000,
+  "max_pri_raw": 10000000,
+  "histogram_bin_raw": 100,
+  "min_histogram_votes": 12,
+  "max_candidates": 32,
+  "absolute_tolerance_raw": 20.0,
+  "relative_tolerance": 0.001,
+  "max_interval_multiple": 3,
+  "min_sequence_pulses": 8,
+  "min_direct_fraction": 0.6,
+  "assumed_toa_units_per_second": 1000000000.0
+}

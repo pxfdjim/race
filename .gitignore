@@ -1,0 +1,22 @@
+# Python 缓存
+__pycache__/
+*.pyc
+.*.partial-*/
+
+# 数据文件（不要提交）
+*.csv
+*.html
+*.zip
+*.rar
+
+# 输出与结果（非必要）
+output/
+提交结果/
+diagnostics/output/
+models/
+
+# 顶层过程文档与交付记录（非必要）
+/*.json
+/*.md
+!/README.md
+diagnostics/*.md

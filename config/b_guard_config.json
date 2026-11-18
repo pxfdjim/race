@@ -1,0 +1,8 @@
+{
+  "maximum_support_gap_seconds": 30.0,
+  "rf_support_gate_mhz": 80.0,
+  "pw_support_gate_us": 0.3,
+  "stable_relative_pri_gate": 0.008,
+  "jitter_relative_pri_gate": 0.05,
+  "baseline_mapping_dominance": 0.9
+}

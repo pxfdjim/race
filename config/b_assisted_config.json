@@ -1,0 +1,21 @@
+{
+  "bearing_base_gate_degrees": 1.25,
+  "bearing_error_multiplier": 3.0,
+  "b_position_margin_m": 150.0,
+  "maximum_b_gap_seconds": 3.0,
+  "smoothing_window_seconds": 6.0,
+  "maximum_range_m": 180000.0,
+  "maximum_bearing_gate_degrees": 5.0,
+  "seed_ambiguity_margin": 0.2,
+  "context_ambiguity_margin": 0.15,
+  "seed_maximum_cost": 0.6,
+  "minimum_anchor_sequences": 5,
+  "minimum_anchor_pulses": 128,
+  "local_context_seconds": 8.0,
+  "local_context_dominance": 0.85,
+  "baseline_mapping_dominance": 0.9,
+  "waveform_rf_gate_mhz": 250.0,
+  "waveform_pw_gate_us": 1.5,
+  "waveform_maximum_pri_ratio": 3.0,
+  "seed_requires_multiplatform": true
+}

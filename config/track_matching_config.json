@@ -1,0 +1,20 @@
+{
+  "maximum_b_gap_seconds": 3.0,
+  "maximum_a_gap_seconds": 5.0,
+  "minimum_comparison_points": 8,
+  "minimum_supported_duration_seconds": 5.0,
+  "minimum_temporal_coverage": 0.5,
+  "inlier_distance_m": 500.0,
+  "minimum_spatial_inlier_fraction": 0.8,
+  "maximum_median_distance_m": 350.0,
+  "maximum_p90_distance_m": 700.0,
+  "motion_window_seconds": 6.0,
+  "minimum_motion_span_seconds": 3.0,
+  "minimum_motion_displacement_m": 120.0,
+  "minimum_motion_comparisons": 5,
+  "minimum_motion_comparison_fraction": 0.15,
+  "maximum_median_heading_difference_degrees": 45.0,
+  "maximum_median_speed_difference_m_per_second": 60.0,
+  "minimum_score_margin": 0.04,
+  "minimum_relative_score_margin": 0.15
+}

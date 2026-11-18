@@ -1,0 +1,11 @@
+{
+  "a_toa_unit": "us",
+  "internal_time_unit": "ns",
+  "timestamp_tolerance_ns": 1000000,
+  "maximum_b_interpolation_gap_seconds": 3.0,
+  "origins": [
+    {"scenario_id": "P1A", "data_version": "train", "datetime": "2026-11-10 09:00:00"},
+    {"scenario_id": "P1A", "data_version": "test", "datetime": "2026-11-11 09:00:00"}
+  ],
+  "origin_source": "Public D1 scene bulletin; consistency checked against every A datetime. No clock-bias correction is inferred."
+}

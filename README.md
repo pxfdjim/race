@@ -1,5 +1,21 @@
 # B04 正式数据新版流程：读取、分组、定位、匹配、类别与状态识别
 
+## 最新 PXF 候选流程（2026-11-19）
+
+在已有的 B04 基线处理后，使用对象恢复、归属纠偏和状态重算脚本生成 P1A 候选。
+
+| 阶段 | 入口 |
+| --- | --- |
+| 恢复对象及西侧可观测片段 | `recover_objects.py`、`recover_missing_tracks.py` |
+| 评估已有对象的补回方案 | `compare_fragment_stitching.py`、`refine_object_assignments.py` |
+| 恢复连续漏掉的 R06 脉冲 | `recover_r06_gaps.py` |
+| 检查早期补回的归属冲突 | `refine_object_assignments.py --conflict-candidate` |
+| 按候选对象归属重算状态 | `improve_candidate_states.py` |
+
+最后三步依次在同一候选目录执行。两个对象修订脚本需已有基线中间结果。状态重算还需原实验的 GRU 权重、验证归档、`完整流程新提交/state_neural_comparison.json` 选参记录，以及支持 OpenMP 的 `g++`。具体路径可在脚本的 `--help` 和 [CPI 历史 GRU 实验说明](CPI历史GRU状态实验/README.md) 中查看。`recover_r06_gaps.py` 和早期对象恢复脚本需要 NumPy。运行时需单独准备比赛输入、模型和实验归档。
+
+`main.py` 和 Docker 入口运行基线流程。PXF 的候选修订由上表脚本单独执行。下文记录基线的详细步骤。
+
 本目录是独立的新实现，当前完成**读取与时间轴适配、稳定/抖动 PRI 提取、平台内分组、A-only 与 B 辅助保护版跨平台关联、二维交叉定位、A—B 航迹匹配、R01～R08 类别识别及 target_state 状态模型训练与预测**。状态模型的粗跟识别仍明显偏弱。旧的 `competition/04/29/` 程序和结果，以及 `new_04` 内其他目录的程序、模型、提交文件均未改写。
 
 数值程序和 SVG 绘图使用 Python 3.10+ 标准库；安装 ImageMagick 时可导出 PNG，本次结果已包含图片。`sequence_id` 是短时脉冲序列，`local_cluster_id` 是平台内关联结果，`object_id` 是跨平台对象假设，`target_class` 是型号预测，`target_state` 是0搜索/1粗跟/2精跟的时变预测。**已导出官方字段的两个测试CSV；平台是否接受空编号尚未验证，没有上传。**
